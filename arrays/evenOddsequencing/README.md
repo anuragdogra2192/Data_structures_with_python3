@@ -5,4 +5,4 @@ Mr. Stark has an input array of integers and he wants to reorder its entries so 
 * You can use O(n), where n is the length of the array.
 * You are required to solve it without allocating additional storage.
 
-I want you to help Mr. Stark to solve this problem on your own. First try out own your own then see the solution.
+I want you to help Mr. Stark to solve this problem on your own. First try out on your own then see the solution.
