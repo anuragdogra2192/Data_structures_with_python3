@@ -54,15 +54,25 @@ Given the following counts of userids, there are only 3 userids that meet or exc
 
 '''
 
-from typing import Dict
-
-
 def TansactionLogs(Logs, thresold):
     Dict_logs = {}
     for log in Logs:
-        unique_log = set(log)
+        unique_log = set(log[0].split(" ")[:-1])
+        #print(unique_log)
         for l in unique_log:
             if l in Dict_logs:
-                None
+                Dict_logs[l] += 1
             else:
-                Dict 
+                Dict_logs[l] = 1
+    
+    Output = []
+    for key, value in Dict_logs.items():
+        if(value >= thresold):
+            Output.append(key)
+
+    return sorted(Output)
+
+
+
+LogData = [['345366 89921 45'],['029323 38239 23'],['38239 345366 15'],['029323 38239 77'],['345366 38239 23'],['029323 345366 13'],['38239 38239 23']]
+print(TansactionLogs(LogData, thresold=3))
