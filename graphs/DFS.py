@@ -74,3 +74,14 @@ def dfs(visited, graph, node):
 #print(visited)
 dfs(visited, graph, 'B')
 print(visited)
+
+
+treed = {
+    'A' : ['B','C'],
+    'B' : ['D', 'E'],
+    'C' : ['F'],
+    'D' : [],
+    'E' : ['F'],
+    'F' : [],
+    'G' : []
+}

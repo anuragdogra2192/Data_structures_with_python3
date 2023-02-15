@@ -4,7 +4,7 @@ and without altering the permutation array
 Given:
 A =    [a,b,c,d,e]
 perm = [4,3,2,0,1]
-Rearranged A = [e, d, c, b, a] 
+Rearranged A = [e, d, c, a, b] 
 """
 def apply_permutation(A, perm):
     i = 0
@@ -20,6 +20,10 @@ def apply_permutation(A, perm):
 print("Provide an array of characters to permutate: \n")
 A = [x for x in input().split()]
 
+print(A)
 print("Provide permutate sequence of samelength as the previous given array: \n")
+
 perm = [int(x) for x in input().split()]
+print(perm)
+
 print(apply_permutation(A, perm))

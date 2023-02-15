@@ -13,6 +13,16 @@ class SLinkedList:
             print (printval.dataval)
             printval = printval.nextval
 
+    def AtEnd(self, newData):
+        NewNode = Node(newData)
+        if self.headval is None:
+            self.headval = NewNode
+            return None
+        last = self.headval
+        while(last.nextval):
+            last = last.nextval
+        last.nextval = NewNode
+
     def AtEnd(self, newdata):
         NewNode = Node(newdata)
         if self.headval is None:
@@ -46,9 +56,9 @@ class SLinkedList:
             prev = HeadVal
             HeadVal = HeadVal.next
             
-
-
-    
+"""
+Mon->Tue->Wed->Thu->Fri
+"""  
 list1 = SLinkedList()
 list1.headval = Node("Mon")
 e2 = Node("Tue")
